@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 mx-auto mt-3" *ngFor="let card of datas">
+      <div class="card ml-2 text-center">
+        <img class="card-img-top" src={{card.img}}>
+        <div class="card-body">
+          <h5 class="card-title">{{card.name}}</h5>
+          <p class="card-text">{{card.description}}</p>
+          <p class="card-text"><small class="text-muted">{{card.price}}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

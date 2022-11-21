@@ -1,0 +1,41 @@
+<div class="container pt-4">
+  <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+          <div class="card mb-3">
+              <div class="card-body">
+                  <h3 class="text-center">Registrar usuario</h3>
+                  <span *ngIf="submitted && registerUser.invalid" class="badge alert-danger "> Todos los campos son obligatorios</span>
+                  <form class="mt-4" [formGroup]="registerUser" (ngSubmit)="addUser()">
+                      <label style="text-align: left;" class="text-black">Documento</label>
+                      <input type="text" class="form-control col"
+                          formControlName="document" placeholder="Número de documento">
+                          <br>
+                      <label class="text-black">Nombres</label>
+                      <input type="text" class="form-control col"
+                          formControlName="name" placeholder="Nombres">
+                          <br>
+                      <label class="text-black">Apellidos</label>
+                      <input type="text" class="form-control col"
+                          formControlName="lastname" placeholder="Apellidos">
+                          <br>
+                      <label class="text-black">Teléfono</label>
+                      <input type="text" class="form-control col"
+                          formControlName="phone" placeholder="Telefono">
+                          <br>
+                      <label class="text-black">Correo</label>
+                      <input type="email" class="form-control col"
+                          formControlName="email" placeholder="Correo">
+                          <br>
+                      <label class="text-black">Contraseña</label>
+                      <input type="password" class="form-control col"
+                          formControlName="password" placeholder="Contraseña">
+                          <br>
+                      <div class="mt-3">
+                          <button type="submit" class="btn btn-dark float-right mr-3"> <i class="fas fa-save fa-lg"></i></button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

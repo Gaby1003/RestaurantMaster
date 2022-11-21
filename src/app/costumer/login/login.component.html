@@ -1,0 +1,29 @@
+<body background="assets/imagenes/fondo.jpg">
+
+  <div class="container">
+      <div class="row" style="vertical-align: middle;">
+          <div class="col-md-6 mx-auto mt-5">
+              <div class="card">
+                  <div class="card-body" style="vertical-align: middle;">
+                      <h2 class="text-center">Login</h2>
+                          <form [formGroup]="loginForm">
+                          <div class="form-group" >
+                            <label class="text-black">Documento</label>
+                            <input type="text" placeholder="Documento" class="form-control" formControlName="email">
+                          </div>
+                          <div class="form-group">
+                             <label class="text-black">Contraseña</label>
+                             <input type="password" placeholder="Contraseña" class="form-control" formControlName="password">
+                          </div>
+                          <div class="row">
+                            <button type="submit" class="btn btn-dark col-md-3 ml-5"(click)="onLogin()">Ingresar</button>
+                            <button type="submit" class="btn btn-dark col-md-3 ml-3" (click)="onRegister()">Registrarse</button>
+                            <button type="submit" class="btn btn-dark col-md-3 ml-3" (click)="onBack()">Regresar</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
